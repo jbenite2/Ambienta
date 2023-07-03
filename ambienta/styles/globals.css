@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@keyframes flyIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.flying-letters {
+display: inline-block;
+animation: flyIn 0.5s ease-in-out forwards;
+opacity: 0;
+}
+
+.landing-image {
+width: 100%;
+height: 100vh; 
+background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(/landing-img.jpg);
+background-size: cover;
+background-position: center;}
+
+.team-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+  background: white;
+}
+
+.team-member{
+  display: flex;
+}
+
+.member-image{
+border-radius: 80%;
+}
+
+.custom{
+background-color:#2f407e  
+}
+
+.about-text{
+  color: black;
+  margin: 20px 100px;
+}
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* .banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      url(/landing-img.jpg);
+    background-size: cover;
+    background-position: center;
+  } */
+  
+  .navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 180px;
+    cursor: pointer;
+  }
+  
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar ul li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #171313;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  
+  .navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #a8a4a4;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  
+  .navbar ul li:hover::after {
+    width: 100%;
+  }
+  
+  .content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .navbar ul {
+      display: none;
+    }
+  
+    .navbar .menu-toggle {
+      display: block;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+  
+    .navbar .menu-toggle:checked ~ ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar .menu-toggle:checked ~ ul li {
+      margin: 10px 0;
+    }
+  }
+  
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* FOOTER */
+
+/* Footer Styles */
+
+.footer {
+  background-color: white;
+  padding: 30px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 0px 0;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
