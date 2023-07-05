@@ -5,9 +5,6 @@ import Image from 'next/image';
 export default function About() {
   return (
     <div id="sectionTwo">
-      <div className="big-image">
-        <img src="/about-us-main-image.JPG" alt="Main About Us Image" />
-      </div>
       <div className="team-section">
         <div className="team-member">
           <Image className="rounded-full w-96 h-96 object-cover" src="/JBS.png" width={600} height={500} />

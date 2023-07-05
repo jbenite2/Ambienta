@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <div className={currentURL === '/' ? 'banner' : ''}>
       <div className="navbar">
-        <a href="/"><img src="/logo.png" className="logo" alt="Logo" /></a>
+        <a href="/"><img src="/ambienta-brown.png" className="logo" alt="Logo" /></a>
         <ul className="nav">
           <li><a href="/">Home</a></li>
           <li><a href="/about">About</a></li>
